@@ -28,6 +28,8 @@ struct mmc_bus_ops {
 	int (*resume)(struct mmc_host *);
 	int (*runtime_suspend)(struct mmc_host *);
 	int (*runtime_resume)(struct mmc_host *);
+	int (*power_save)(struct mmc_host *);
+	int (*power_restore)(struct mmc_host *);
 	int (*alive)(struct mmc_host *);
 	int (*shutdown)(struct mmc_host *);
 	int (*hw_reset)(struct mmc_host *);
